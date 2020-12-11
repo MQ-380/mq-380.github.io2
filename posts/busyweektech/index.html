@@ -34,7 +34,6 @@
 34
 35
 36
-37
 </pre><td class="rouge-code"><pre>
 <span class="kd">let</span> <span class="nx">themeContext</span> <span class="o">=</span> <span class="nx">createContext</span><span class="p">({});</span>
 
@@ -48,13 +47,12 @@
 
 <span class="kd">function</span> <span class="nx">ContextProvier</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
 	<span class="kd">let</span> <span class="p">[</span> <span class="nx">themeContextState</span><span class="p">,</span>  <span class="nx">setThemeContextState</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">({});</span>
-	
+	<span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="p">{</span><span class="nx">themeContextState</span><span class="p">,</span> <span class="nx">setThemeContextState</span><span class="p">}</span>
 	<span class="k">return</span> <span class="p">(</span>
-	<span class="c1">//应该是themeContext.Provider 貌似没发转义。。。</span>
-		<span class="o">&lt;</span><span class="nx">themeContextProvider</span>
-		<span class="nx">value</span><span class="o">=&gt;</span>
+		<span class="o">&lt;</span><span class="nx">themeContext</span><span class="p">.</span><span class="nx">Provider</span>
+		<span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">value</span><span class="p">}</span><span class="o">&gt;</span>
 			<span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}</span>
-		<span class="o">&lt;</span><span class="sr">/themeContextProvider</span><span class="err">&gt;
+		<span class="o">&lt;</span><span class="sr">/themeContext.Provider</span><span class="err">&gt;
 </span>	<span class="p">);</span>
 <span class="p">}</span>
 
