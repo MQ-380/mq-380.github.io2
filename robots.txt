@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://mq-380.github.io/sitemap.xml
+Sitemap: https://mqsh.me/sitemap.xml
